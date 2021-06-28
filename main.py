@@ -35,6 +35,17 @@ def display_board():
         check_if_win()
         check_if_tie()
 
+    def check_if_win():
 
+        return
+
+
+    def check_if_tie():
+
+        return
+
+    def flip_player():
+
+        return
 
     play_game()
