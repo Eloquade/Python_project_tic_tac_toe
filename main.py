@@ -1,51 +1,60 @@
 board = ["-", "-", "-",
          "-", "-", "-",
-         "-", "-", "-", ]
+         "-", "-", "-"]
 
-game_still_going = true
+game_still_going = True
+
+winner = None
+
+current_player = "X"
+
 
 def display_board():
-    print(board[0] + "|" +board[1] + "|" +board[2] + "|" +
-          board[3] + "|" +board[4] + "|" +board[5] + "|" +
-          board[6] + "|" +board[7] + "|" +board[8] + "|" )
-
-    print(display_board)
-
-    def play_game():
-        display_board()
-
-        while game_still_going
-
-            handle_turn(current_player)
-
-            check_if_game_over()
-
-            flip_player()
+    print(board[0] + " | " + board[1] + " | " + board[2])
+    print(board[3] + " | " + board[4] + " | " + board[5])
+    print(board[6] + " | " + board[7] + " | " + board[8])
 
 
-    def handle_turn():
-        position = input("choose a position from 1-9")
-        position = int(position) -1
+def play_game():
+    display_board()
 
-        board[position] = "X"
+    while game_still_going:
+        handle_turn(current_player)
 
-        display_board()
+        check_if_game_over()
 
-    def check_if_game_over():
-        check_if_win()
-        check_if_tie()
+        flip_player()
 
-    def check_if_win():
+    if winner == "X" or winner == "O":
+        print(winner + "won.")
+    elif winner is None:
+        print("Tie.")
 
-        return
+
+def handle_turn(player):
+    position = input("choose a position from 1-9")
+    position = int(position) - 1
+
+    board[position] = "X"
+
+    display_board()
 
 
-    def check_if_tie():
+def check_if_game_over():
+    check_if_win()
+    check_if_tie()
 
-        return
 
-    def flip_player():
+def check_if_win():
+    return
 
-        return
 
-    play_game()
+def check_if_tie():
+    return
+
+
+def flip_player():
+    return
+
+
+play_game()
